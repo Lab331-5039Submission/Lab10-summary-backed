@@ -15,5 +15,6 @@ class AuctionItemDTO {
     var type : String? = null
     var status : Boolean? = false
 
-    var winner : AuctionBidsDTO? = null
+    var auctionHistory : List<BidsDTO>? = null
+    var winner : BidsDTO? = null
 }

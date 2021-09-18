@@ -4,6 +4,7 @@ import lombok.Data
 import lombok.Builder
 import lombok.NoArgsConstructor
 import lombok.AllArgsConstructor
+import se331.lab.summary.entity.Bids
 
 @Data
 @Builder

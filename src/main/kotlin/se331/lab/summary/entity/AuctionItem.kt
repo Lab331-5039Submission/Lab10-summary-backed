@@ -1,7 +1,6 @@
-package se331.lab.summary.entity.dto
+package se331.lab.summary.entity
 
 import lombok.*
-import se331.lab.summary.entity.Bids
 import javax.persistence.*
 
 @Data
@@ -18,6 +17,9 @@ class AuctionItem {
     var type : String? = null
     var status : Boolean? = false
 
+    @OneToMany(mappedBy = "bidsId")
+    var bidsList : List<Bids>? = null
+
     @OneToOne(mappedBy = "bidsId")
-    var winner : Bids? = null
+    var successfulBids : Bids? = null
 }

@@ -1,7 +1,7 @@
 package se331.lab.summary.entity
 
 import lombok.*
-import se331.lab.summary.entity.dto.AuctionItem
+import se331.lab.summary.entity.AuctionItem
 import javax.persistence.*
 
 @Data
@@ -17,6 +17,6 @@ class Bids {
     var amount : Double? = 0.0
     var datetime : String? = "2000-01-01"
 
-    @OneToMany
-    var bideditem : List<AuctionItem>? = null
+    @ManyToOne
+    var bideditem : AuctionItem? = null
 }
