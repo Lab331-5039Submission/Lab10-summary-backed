@@ -17,7 +17,7 @@ class AuctionItem {
     var type : String? = null
     var status : Boolean? = false
 
-    @OneToMany(mappedBy = "bidsId")
+    @OneToMany(mappedBy = "bidedItem")
     var bidsList : List<Bids>? = null
 
     @OneToOne(mappedBy = "bidsId")
